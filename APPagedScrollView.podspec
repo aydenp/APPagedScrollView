@@ -15,7 +15,7 @@ In addition, there is an APPagedScrollViewController that can set up the scroll 
 
   s.homepage     = "https://github.com/aydenp/APPagedScrollView"
 
-  s.license      = "MIT"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
   s.author       = "Ayden P"
 
@@ -23,7 +23,7 @@ In addition, there is an APPagedScrollViewController that can set up the scroll 
 
   s.source       = { :git => "https://github.com/aydenp/APPagedScrollView.git", :tag => "#{s.version}" }
 
-  s.source_files  = "APPagedScrollView/*.{swift}"
+  s.source_files  = "APPagedScrollView/APPagedScrollView/*.{swift}"
 
   s.framework  = "UIKit"
 
