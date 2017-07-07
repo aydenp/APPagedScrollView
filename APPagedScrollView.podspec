@@ -23,7 +23,7 @@ In addition, there is an APPagedScrollViewController that can set up the scroll 
 
   s.source       = { :git => "https://github.com/aydenp/APPagedScrollView.git", :tag => "#{s.version}" }
 
-  s.source_files  = "APPagedScrollView/APPagedScrollView/*.{swift}"
+  s.source_files  = "APPagedScrollView/*.swift"
 
   s.framework  = "UIKit"
 
