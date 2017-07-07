@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		C3A8C58B1F10343C001D6FB4 /* APPagedScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A8C5891F10343C001D6FB4 /* APPagedScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3A8C5931F10348E001D6FB4 /* APPagedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A8C5921F103463001D6FB4 /* APPagedScrollView.swift */; };
+		C3A8C5941F10348E001D6FB4 /* APPagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A8C5911F103463001D6FB4 /* APPagedScrollViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C3A8C5861F10343C001D6FB4 /* APPagedScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APPagedScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A8C5891F10343C001D6FB4 /* APPagedScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPagedScrollView.h; sourceTree = "<group>"; };
 		C3A8C58A1F10343C001D6FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3A8C5911F103463001D6FB4 /* APPagedScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPagedScrollViewController.swift; sourceTree = "<group>"; };
+		C3A8C5921F103463001D6FB4 /* APPagedScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPagedScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXGroup;
 			children = (
 				C3A8C5891F10343C001D6FB4 /* APPagedScrollView.h */,
+				C3A8C5921F103463001D6FB4 /* APPagedScrollView.swift */,
+				C3A8C5911F103463001D6FB4 /* APPagedScrollViewController.swift */,
 				C3A8C58A1F10343C001D6FB4 /* Info.plist */,
 			);
 			path = APPagedScrollView;
@@ -130,6 +136,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A8C5941F10348E001D6FB4 /* APPagedScrollViewController.swift in Sources */,
+				C3A8C5931F10348E001D6FB4 /* APPagedScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +191,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -235,7 +243,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -259,7 +267,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = madebyayden.ios.frameworks.APPagedScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -278,7 +286,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = madebyayden.ios.frameworks.APPagedScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
