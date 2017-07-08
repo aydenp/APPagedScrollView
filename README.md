@@ -5,9 +5,7 @@ Creating paging scroll views on iOS isn't always the easiest. With APPagedScroll
 
 In addition, there is an `APPagedScrollViewController` that can set up the scroll view for it, which implments the delegate and data source methods so that you can easily override those and provide the data you want.
 
-## Getting started
-
-### Installation
+## Installation
 
 You can install APPagedScrollView using CocoaPods by adding it to your Podfile:
 
@@ -15,11 +13,11 @@ You can install APPagedScrollView using CocoaPods by adding it to your Podfile:
 
 or by copying over the two Swift files (as needed).
 
-### Implementing it in your app
+## Implementing it in your app
 
 Depending on your needs, you can either subclass and override the methods on `APPagedScrollViewController` or just use your own class(es) and implement `APPagedScrollViewDelegate` and `APPagedScrollViewDataSource`.
 
-#### Using the view controller
+### Using the view controller
 
 In our example, we have subclassed `APPagedScrollViewController`.
 
@@ -54,7 +52,7 @@ class MyPagingScrollViewController: APPagedScrollViewController {
 }
 ```
 
-##### Adding a page control
+#### Adding a page control
 
 The view controller also provides page control functionality built-in, meaning that it can automatically update your `UIPageControl` with the current index and total page count, as well as allow users to navigate by tapping it. To get this functionality, simply create a UIPageControl, and set it on the view controller:
 
@@ -70,19 +68,19 @@ pageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).i
 self.pageControl = pageControl
 ```
 
-##### Changing what it attaches to
+#### Changing what it attaches to
 
 By default, the scroll view attaches to the top of the view controller's view. This is usually fine, except if you manually set your scroll view's content inset and don't want to worry about fixing it to layout properly. You can override `attachScrollViewToTopLayoutGuide` and return `true` to attach the scroll view directly to your top layout guide, removing the need for automatically set scroll view insets. (iOS 11 slightly changes this behaviour by applying the system insets afterwards by default).
 
-##### Property Proxies
+#### Property Proxies
 
 The view controller by default has some variables and functions that carry over functionality of the paged scroll view class.
 
-#### Using the view
+### Using the view
 
 By using the view, you don't get the automatic layout or page control functionality. You'll have to set it up yourself. Once you've set it up, make sure to set the `delegate` and `dataSource` properties properly so that it knows where to receive data from.
 
-##### Responding to size changes
+#### Responding to size changes
 
 If an iOS device changes size (rotation, etc), the scroll view can become misaligned. You can call `alignScrollView()` on it to re-align it. This will cause the scroll view to jump to the aligned location, so you can also provide a `UIViewControllerTransitionCoordinator` to animate alongside. Here's an example that automatically aligns the scroll view position during a rotation:
 
@@ -93,31 +91,31 @@ If an iOS device changes size (rotation, etc), the scroll view can become misali
     }
 ```
 
-#### Other notes
+### Other notes
 
-##### Reloading the data
+#### Reloading the data
 
 To reload the data in the view, simply call `reloadData()` on either the scroll view or its controller.
 
-##### Getting the page count or current page index
+#### Getting the page count or current page index
 
 If you need to get the current page index or number of pages somewhere else in your code, you can call `currentPageIndex` or `numberOfPages` on the scroll view or its controller.
 
-##### Checking if the scroll view can move in a direction
+#### Checking if the scroll view can move in a direction
 
 We provide convenience variables on both the scroll view and its controller, named `canGoBack` and `canGoForward`, which tell you if the scroll view can go back or forward based on its current index and the number of pages. You can use this in your code to disable previous/next buttons on page change, for example.
 
-##### Scrolling to a different page
+#### Scrolling to a different page
 
 You can simply go back or forward using the `goBack` or `goForward` functions on the scroll view or its controller (they both also accept an optional boolean argument, `animated`).
 
 You can also just outright set the `currentPageIndex` from the above section to scroll to that page with an animation. If you don't want an animation, use the `scroll(to: index, animated: animated)` function and turn off the animation using the `animated` argument.
 
-##### How can I get other `UIScrollViewDelegate` methods called in my code.
+#### How can I get other `UIScrollViewDelegate` methods called in my code.
 
 `APPagedScrollView` needs access to the scroll view's delegate in order to receive events properly, but we have a property on it called `receivingDelegate` which we forward all the events to, allowing you to receive them.
 
-##### Getting page move events
+#### Getting page move events
 
 Two delegate methods allow you to perform actions based on when the user changes pages, or is transitioning between pages.
 
@@ -127,6 +125,6 @@ Two delegate methods allow you to perform actions based on when the user changes
 
 > Note that `pagedScrollView(_:, movingTo:, index:, progress:)` doesn't pick up on scroll events that are outside of the scroll view's content area by default. To explain more, everyone that's used iOS knows that scroll views allow you to scroll past the content area, with an elastic-like effect to slow you down, which puts you back where you were when you're finished. If you'd like the delegate method to also pick up these events, you can enable `elasticScrollingEvents`, but make sure if you have logic in the delegate that relies on page numbers, it knows to account for these transitions (pages past the bounds will have indices of -1 or just outside of the possible range).
 
-### License
+## License
 
 This project is licensed under the [MIT license](/LICENSE). Please make sure you comply with its terms while using the library.
