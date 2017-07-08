@@ -78,7 +78,7 @@ The view controller by default has some variables and functions that carry over 
 
 ### Using the view
 
-By using the view, you don't get the automatic layout or page control functionality. You'll have to set it up yourself. Once you've set it up, make sure to set the `delegate` and `dataSource` properties properly so that it knows where to receive data from.
+By using the view, you don't get the automatic layout or page control functionality. You'll have to set it up yourself. Once you've set it up, make sure to set the `pagingDelegate` and `dataSource` properties properly so that it knows where to receive data from.
 
 #### Responding to size changes
 
