@@ -7,10 +7,14 @@
 
 import UIKit
 
+/// The main paged scroll view class, which allows for an automatic layout of the content provided by the data source and delegates.
 public class APPagedScrollView: UIScrollView, UIScrollViewDelegate {
+    /// A data source for the paging scroll view.
     weak public var dataSource: APPagedScrollViewDataSource?
+    /// The delegate to use for APPagedScrollView events.
     weak public var pagingDelegate: APPagedScrollViewDelegate?
     private var stackView: UIStackView!, previousPage: Int?
+    /// Where to send normal UIScrollView events.
     var receivingDelegate: UIScrollViewDelegate?
     private var pageToLoad: Int?, hasLoaded = false
     
@@ -127,6 +131,11 @@ public class APPagedScrollView: UIScrollView, UIScrollViewDelegate {
         }
     }
     
+    /// The number of pages within this scroll view.
+    public var numberOfPages: Int {
+        return dataSource?.numberOfPages(in: self) ?? 0
+    }
+    
     /// Whether or not to have movedTo: events include elastic scrolling
     public var elasticScrollingEvents = false
     
@@ -182,11 +191,6 @@ public class APPagedScrollView: UIScrollView, UIScrollViewDelegate {
     }
     
     // MARK: - Internal Data Source Accessors & Delegate Functions
-    
-    /// The number of pages within this scroll view.
-    public var numberOfPages: Int {
-        return dataSource?.numberOfPages(in: self) ?? 0
-    }
     
     // Easy method to get view from data source and respond accordingly to lack of one
     private func view(forPageAt index: Int) -> UIView {

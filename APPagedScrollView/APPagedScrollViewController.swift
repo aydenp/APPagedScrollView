@@ -7,7 +7,9 @@
 
 import UIKit
 
+/// A utility view controller class that lets you easily setup APPagedScrollView for an entire view controller, providing automatic layout and page control support.
 public class APPagedScrollViewController: UIViewController, APPagedScrollViewDelegate, APPagedScrollViewDataSource {
+    /// The internal paged scroll view.
     var scrollView = APPagedScrollView()
     
     override public func viewDidLoad() {

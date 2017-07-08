@@ -15,6 +15,8 @@ or by copying over the two Swift files (as needed).
 
 ## Implementing it in your app
 
+**We now have documentation for each class!** [Click here to view the documentation](https://aydenp.github.io/APPagedScrollView/)
+
 Depending on your needs, you can either subclass and override the methods on `APPagedScrollViewController` or just use your own class(es) and implement `APPagedScrollViewDelegate` and `APPagedScrollViewDataSource`.
 
 ### Using the view controller

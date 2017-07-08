@@ -1,0 +1,18 @@
+# Run jazzy from the current directory to generate documentation.
+
+module: APPagedScrollView
+module_version: 1.0.1
+author: Ayden P
+author_url: https://madebyayden.co
+github_url: https://github.com/aydenp/APPagedScrollView
+github_file_prefix: https://github.com/aydenp/APPagedScrollView/tree/master
+min_acl: internal
+output: Docs
+skip_undocumented: true
+clean: true
+xcodebuild_arguments: [-project, APPagedScrollView.xcodeproj, -target, APPagedScrollView]
+
+# Keep this until Cocoadocs is using a Jazzy release with the updated config keys:
+module: APPagedScrollView
+author: Ayden P
+author_url: https://madebyayden.co
