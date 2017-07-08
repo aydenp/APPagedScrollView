@@ -1,7 +1,7 @@
 # Run jazzy from the current directory to generate documentation.
 
 module: APPagedScrollView
-module_version: 1.0.1
+module_version: 1.0.2
 author: Ayden P
 author_url: https://madebyayden.co
 github_url: https://github.com/aydenp/APPagedScrollView

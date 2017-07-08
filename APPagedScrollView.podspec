@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "APPagedScrollView"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "A quick delegate-based paging scroll view class that can handle all the layout for you."
   s.requires_arc = true
 
