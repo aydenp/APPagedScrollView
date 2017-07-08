@@ -1,0 +1,33 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/aydenp/APPagedScrollView/APPagedScrollView/APPagedScrollView.swift",
+      "line": 10,
+      "symbol": "APPagedScrollView",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aydenp/APPagedScrollView/APPagedScrollView/APPagedScrollView.swift",
+      "line": 258,
+      "symbol": "APPagedScrollViewDataSource",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aydenp/APPagedScrollView/APPagedScrollView/APPagedScrollView.swift",
+      "line": 279,
+      "symbol": "APPagedScrollViewDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/aydenp/APPagedScrollView/APPagedScrollView/APPagedScrollViewController.swift",
+      "line": 10,
+      "symbol": "APPagedScrollViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/aydenp/APPagedScrollView"
+}
