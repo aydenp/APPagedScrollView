@@ -9,7 +9,7 @@ import UIKit
 
 public class APPagedScrollView: UIScrollView, UIScrollViewDelegate {
     weak public var dataSource: APPagedScrollViewDataSource?
-    weak var pagingDelegate: APPagedScrollViewDelegate?
+    weak public var pagingDelegate: APPagedScrollViewDelegate?
     private var stackView: UIStackView!, previousPage: Int?
     var receivingDelegate: UIScrollViewDelegate?
     private var pageToLoad: Int?, hasLoaded = false
