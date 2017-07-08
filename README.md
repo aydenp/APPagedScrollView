@@ -126,3 +126,7 @@ Two delegate methods allow you to perform actions based on when the user changes
 - `func pagedScrollView(_ pagedScrollView: APPagedScrollView, movingTo index: Int, from oldIndex: Int, progress: CGFloat)` is called during the scroll from one page to another. `index` is the page we think it'll end up on, `oldIndex` is the page it's transitioning from, and `progress` is a value from 0 to 1 containing the progress of the transition. You can use this to do interactive scroll events and animations in your app as the page changes.
 
 > Note that `pagedScrollView(_:, movingTo:, index:, progress:)` doesn't pick up on scroll events that are outside of the scroll view's content area by default. To explain more, everyone that's used iOS knows that scroll views allow you to scroll past the content area, with an elastic-like effect to slow you down, which puts you back where you were when you're finished. If you'd like the delegate method to also pick up these events, you can enable `elasticScrollingEvents`, but make sure if you have logic in the delegate that relies on page numbers, it knows to account for these transitions (pages past the bounds will have indices of -1 or just outside of the possible range).
+
+### License
+
+This project is licensed under the [MIT license](/LICENSE). Please make sure you comply with its terms while using the library.
