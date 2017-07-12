@@ -12,7 +12,7 @@ open class APPagedScrollViewController: UIViewController, APPagedScrollViewDeleg
     /// The internal paged scroll view.
     var scrollView = APPagedScrollView()
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         scrollView.frame = view.bounds
         scrollView.pagingDelegate = self
@@ -29,7 +29,7 @@ open class APPagedScrollViewController: UIViewController, APPagedScrollViewDeleg
         }
     }
     
-    override public func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         alignScrollView(with: coordinator)
     }
