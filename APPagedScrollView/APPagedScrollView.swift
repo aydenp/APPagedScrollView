@@ -8,7 +8,7 @@
 import UIKit
 
 /// The main paged scroll view class, which allows for an automatic layout of the content provided by the data source and delegates.
-public class APPagedScrollView: UIScrollView, UIScrollViewDelegate {
+open class APPagedScrollView: UIScrollView, UIScrollViewDelegate {
     /// A data source for the paging scroll view.
     weak public var dataSource: APPagedScrollViewDataSource?
     /// The delegate to use for APPagedScrollView events.
