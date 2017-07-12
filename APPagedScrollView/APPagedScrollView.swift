@@ -51,11 +51,8 @@ open class APPagedScrollView: UIScrollView, UIScrollViewDelegate {
         stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         stackView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor).isActive = true
         stackView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-    }
-    
-    override public func didMoveToWindow() {
-        super.didMoveToWindow()
-        // Reload data on move to window
+
+        // Load initial data
         reloadData()
     }
     
