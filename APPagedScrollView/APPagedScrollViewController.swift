@@ -64,7 +64,7 @@ open class APPagedScrollViewController: UIViewController, APPagedScrollViewDeleg
         }
     }
     
-    public var attachScrollViewToTopLayoutGuide: Bool {
+    open var attachScrollViewToTopLayoutGuide: Bool {
         return false
     }
     
@@ -127,7 +127,7 @@ open class APPagedScrollViewController: UIViewController, APPagedScrollViewDeleg
      - parameter pagedScrollView: The scroll view that has moved.
      - parameter index: The index of the page that the scroll view has moved to.
      */
-    public func pagedScrollView(_ pagedScrollView: APPagedScrollView, movedTo index: Int, from oldIndex: Int?) {
+    open func pagedScrollView(_ pagedScrollView: APPagedScrollView, movedTo index: Int, from oldIndex: Int?) {
         pageControl?.currentPage = index
     }
     
@@ -139,7 +139,7 @@ open class APPagedScrollViewController: UIViewController, APPagedScrollViewDeleg
      - parameter oldIndex: The index of the page that the scroll view is moving from.
      - parameter progress: The progress of the transition as a value from 0.0 to 1.0.
      */
-    public func pagedScrollView(_ pagedScrollView: APPagedScrollView, movingTo index: Int, from oldIndex: Int, progress: CGFloat) {}
+    open func pagedScrollView(_ pagedScrollView: APPagedScrollView, movingTo index: Int, from oldIndex: Int, progress: CGFloat) {}
     
     // MARK: - Paged Scroll View Data Source
     
@@ -150,7 +150,7 @@ open class APPagedScrollViewController: UIViewController, APPagedScrollViewDeleg
      
      - returns: The number of pages in the scroll view.
      */
-    public func numberOfPages(in pagedScrollView: APPagedScrollView) -> Int {
+    open func numberOfPages(in pagedScrollView: APPagedScrollView) -> Int {
         fatalError("APPagedScrollViewController requires that you override numberOfPages(in:) with the correct value")
     }
     
@@ -162,7 +162,7 @@ open class APPagedScrollViewController: UIViewController, APPagedScrollViewDeleg
      
      - returns: The page view for the provided index in the scroll view.
      */
-    public func view(forPageAt index: Int, in pagedScrollView: APPagedScrollView) -> UIView {
+    open func view(forPageAt index: Int, in pagedScrollView: APPagedScrollView) -> UIView {
         fatalError("APPagedScrollViewController requires that you override view(forPageAt:, in:) with the correct value")
     }
 }
