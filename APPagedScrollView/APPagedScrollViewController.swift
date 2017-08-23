@@ -48,7 +48,7 @@ open class APPagedScrollViewController: UIViewController, APPagedScrollViewDeleg
     }
     
     /// Reloads the pages of the scroll view.
-    public func reloadData() {
+    open func reloadData() {
         scrollView.reloadData()
         pageControl?.currentPage = currentPageIndex
         pageControl?.numberOfPages = numberOfPages
