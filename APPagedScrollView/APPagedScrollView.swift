@@ -136,6 +136,11 @@ open class APPagedScrollView: UIScrollView, UIScrollViewDelegate {
     /// Whether or not to have movedTo: events include elastic scrolling
     public var elasticScrollingEvents = false
     
+    /// Access all the loaded page views
+    public var loadedPageViews: [UIView] {
+        return stackView.arrangedSubviews
+    }
+    
     /**
      Scrolls to the page with the provided index.
      
